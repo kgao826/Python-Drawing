@@ -1,10 +1,6 @@
 
 from tkinter import *
 
-#-------------------------------------------
-#-------------------------------------------
-# a) Makes one change to the main() function
-#-------------------------------------------
 def main():
     canvas_width = 600
     canvas_height = 600
@@ -27,12 +23,7 @@ def main():
     draw_cardioid_connections(a_canvas, circle_pts)
 
     window.mainloop()
-#-------------------------------------------
-#-------------------------------------------
-# Reads the list of points from the file
-# (each point is a tuple of two integers)
-# b) Complete the get_list_of_tuples_from_file() function
-#-------------------------------------------
+
 def get_list_of_tuples_from_file(filename):
     in_file = open(filename, "r")
     contents = in_file.read()
@@ -45,12 +36,6 @@ def get_list_of_tuples_from_file(filename):
         index += 2
     return tuple_list
 
-#-------------------------------------------
-#-------------------------------------------
-# Draws the connecting lines of the cardioid
-# c) Complete the draw_outer_circle() function
-# d) Complete the draw_cardioid_connections() function
-#-------------------------------------------    
 def draw_outer_circle(a_canvas, centre_x, centre_y, radius):
     colour = "medium purple"
     a_canvas.create_oval(centre_x - radius, centre_y - radius, centre_x + radius, centre_y + radius, outline = colour)
